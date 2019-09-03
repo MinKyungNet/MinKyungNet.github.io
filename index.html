@@ -27,6 +27,16 @@ layout: default
           </li>
           {% endfor %}
         </ul>
+        
+        <ul class="category">
+          {% for category in post.categories %}
+          <li>
+            <a href="{{ site.url }}{{ site.baseurl }}/categories#{{ category }}">
+              {{ category }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
       </div>
 
       <div class="entry">
