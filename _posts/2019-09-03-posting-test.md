@@ -2,7 +2,7 @@
 layout: post
 title: "posting test"
 tags: [sample post, code, highlighting]
-categories : [Algorithm]
+category : [Algorithm]
 comments: true
 ---
 
