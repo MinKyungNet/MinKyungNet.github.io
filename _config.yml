@@ -29,7 +29,7 @@ navigation:
   - name: Tags
     url: /tags
   - name: Categories
-    url: /category
+    url: /categories
 
 # Pagination
 paginate: 5
