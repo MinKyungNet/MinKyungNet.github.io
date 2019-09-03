@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Testing Readability with a Bunch of Text(Korean ver.)"
+title: "뿌꾸빠꾸빠"
 tags: [샘플 포스트, 가독성, 테스트]
 comments: true
 ---
