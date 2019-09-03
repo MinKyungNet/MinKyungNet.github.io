@@ -35,7 +35,7 @@ permalink: /categories/
             {% endif %}
                 {{ post.title }}
               </a>
-              <time>{{ post.date | date: "%Y-%m-%d" }}</time>
+              <small><time>{{ post.date | date: "%Y-%m-%d" }}</time></small>
           </li>
         {% endif %}
       {% endfor %}
