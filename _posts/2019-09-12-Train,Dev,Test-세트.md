@@ -35,7 +35,7 @@ categories: [Improving deep neural networks]
 좋은 성능을 내는 네트워크를 빠르게 찾는데 큰 영향을 줍니다.    
 
 ### 다양한 하이퍼파라미터
-![image](https://user-images.githubusercontent.com/50114210/64781155-2c389c00-d59d-11e9-8643-ec4bdad3a432.png)
+![image](https://user-images.githubusercontent.com/50114210/64781155-2c389c00-d59d-11e9-8643-ec4bdad3a432.png)      
 신경망을 훈련시킬 때는 많은 결정을 내려야합니다.    
 신경망이 몇개의 층을 가지는지 각각의 층이 몇개의 은닉유닛을 가지는지,    
 학습률은 무엇인지 서로 다른 층에 사용하는 활성화 함수는 무엇인지    
