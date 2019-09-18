@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Histogram"
-tags: [Histogram]
+tags: [Histogram, Min-Max strectching, Percentile strectching, equalization]
 categories: [Computer Vision]
 ---
 # 사용하는 이미지
