@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
-  {% if page.use_math %}
-    {% include mathjax_support.html %}
-  {% endif %}
+  <header>
+    {% if page.use_math %}
+      {% include mathjax_support.html %}
+    {% endif %}
+  </header>
   <body>
     {% include nav.html %}
 
