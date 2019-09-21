@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
   <header>
-    {% if page.use_math %}
-      {% include mathjax_support.html %}
-    {% endif %}
+    {if page.use_math}
+      {include mathjax_support.html}
+    {endif}
   </header>
   <body>
-    {% include nav.html %}
+    {include nav.html}
 
     <div id="main" role="main" class="container">
       {{ content }}
@@ -15,11 +15,11 @@
     <div class="wrapper-footer">
       <div class="container">
         <footer class="footer">
-          {% include footer.html %}
+          {include footer.html}
         </footer>
       </div>
     </div>
 
-    {% include analytics.html %}
+    {include analytics.html}
   </body>
 </html>
