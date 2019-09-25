@@ -47,6 +47,8 @@ BEGIN
 	INSERT INTO deletedMemberTBL VALUES(OLD.memberID, OLD.memberName, OLD.memberAddress, CURDATE());
 END //
 DELIMITER ;
+```
+
 -특정 조건이 되면 작동한다. 위의 코드는 memberTBL의 요소가 삭제되면 trg_deleteMemberTBL에 요소의 정보와 삭제된 시간가지 입력한다.         
 -릴레이티드 데이터베이스의 특징을 잘 드러내고 있다.
 
