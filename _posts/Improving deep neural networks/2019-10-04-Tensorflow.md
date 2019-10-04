@@ -1,10 +1,10 @@
-
 ---
 layout: post
 title: "Tensorflow"
-tags: [Tensorflow]
+tags: [Tensorflew]
 categories: [Improving deep neural networks]
 ---
+
 # 학습 목표
 딥러닝 프레임워크 중 하나인 Tensorflow를 소개한다.
 
