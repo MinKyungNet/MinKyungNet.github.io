@@ -2,7 +2,7 @@
 layout: post
 title: "LeetCode 101 Symmetric Tree"
 tags: [BFS]
-categoires: [Algorithm]
+categories: [Algorithm]
 ---
 
 # 내가 푼 코드
