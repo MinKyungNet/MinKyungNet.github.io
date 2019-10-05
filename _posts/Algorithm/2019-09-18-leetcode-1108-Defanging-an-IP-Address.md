@@ -2,7 +2,7 @@
 layout: post
 title: "LeetCode 1108 Defanging an IP Address"
 tags: "String"
-categoires: [Algorithm]
+categories: [Algorithm]
 ---
 
 전에 추천받은 레코드를 처음 써봤다.     
