@@ -2,7 +2,7 @@
 layout: post
 title: "Softmax Regression"
 tags: [Softmax]
-categoires: [Improving deep neural networks]
+categories: [Improving deep neural networks]
 ---
 
 # 학습 목표
