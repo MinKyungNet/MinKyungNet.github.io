@@ -2,7 +2,7 @@
 layout: post
 title: "Stored Procedure, Trigger, Modeling"
 tags: [Stored Procedure, Trigger, Modeling]
-categories: [Web DB Programing
+categories: [Web DB Programing]
 ---
 
 # 테이블을 만드는 방법
