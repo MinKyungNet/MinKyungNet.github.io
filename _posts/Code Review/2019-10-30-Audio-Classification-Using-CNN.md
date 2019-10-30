@@ -1,5 +1,5 @@
 ---
-layout: post:
+layout: post
 title: "Audio Classification using CNN"
 tags: [CNN, Classification]
 categories: [Code Review]
