@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Train/Dev/Teset 세트 분포"
+title: "Train/Dev/Test 세트 분포"
 tags: [Train set, Dev set, Test set]
 categories: [Structuring Machine Learning Projects]
 ---
@@ -29,8 +29,9 @@ categories: [Structuring Machine Learning Projects]
 다양한 모델을 학습시키며 개발 세트를 이용해 각 아이디어를 평가한 뒤 하나를 고르는 겁니다.         
 그리고 이 과정을 개발 세트 성능이 만족스러울 때까지 반복하고 시험 세트를 이용해 평가하죠.            
 
-#
-이제 여러분이 분류기를 만들고 있고 여러분이 이런 지역에서 작동시킨다고 합시다.        
+# train set과 dev set의 분포가 아예 다른 경우
+![image](https://user-images.githubusercontent.com/50114210/68084740-39775600-fe7d-11e9-83b2-d7eda854fe1a.png)           
+이제 여러분이 분류기를 만들고 있고 여러분이 이런 지역에서 작동시킨다고 합시다.       
 미국, 영국, 기타 유럽 국가 남미, 인도, 중국, 기타 아시아 국가, 호주입니다.          
 그러면 개발 세트와 시험 세트는 어떻게 설정해야 할까요?      
 한 가지 방법은 네 개의 지역을 골라서요.          
@@ -41,7 +42,8 @@ categories: [Structuring Machine Learning Projects]
 왜냐하면 개발 세트와 시험 세트가 서로 다른 지역에서 만들어졌기 때문이죠.         
 저는 대신 개발 세트와 시험 세트가 동일한 분포에서 만들어지기를 추천합니다.       
 
-#
+# train set과 dev set을 잘 설정해야 하는 이유
+![image](https://user-images.githubusercontent.com/50114210/68084749-498f3580-fe7d-11e9-867f-ac7cdea42336.png)            
 더 설명을 해보죠. 여러분이 마음에 두어야 하는 그림인데요.         
 개발 세트와 하나의 실수 평가 척도를 정하는 것은 이것은 마치 목표를 정한 뒤        
 여러분의 팀에게 과녁이 어디 있는지를 말하는 것과 같습니다.             
@@ -52,7 +54,8 @@ categories: [Structuring Machine Learning Projects]
 과정을 반복하며 과녁을 명중시키는 데 점점 가까워지죠.          
 즉 개발 세트에서 척도에 따르면 좋은 성능을 보이는 겁니다.         
 
-#
+# 랜덤하게 섞어서 정해라
+![image](https://user-images.githubusercontent.com/50114210/68084756-56138e00-fe7d-11e9-8db3-0f8cd83b10d6.png)       
 다시 왼쪽 예시에서 개발 세트와 시험 세트를 어떻게 설정하느냐의 문제로 돌아가보면        
 만약 여러분의 팀이 개발 세트에서 혁신적인 성과를 내는 데 여러 달을 쏟았다면               
 밑에 있는 네 개 지역의 데이터에서 얻은 시험 세트에 대하여          
@@ -69,7 +72,8 @@ categories: [Structuring Machine Learning Projects]
 즉 개발 세트와 시험 세트 모두 여덟 개의 지역에서 얻어지는 것이죠.         
 모든 실제 데이터가 섞여 있는 같은 분포에서 개발 세트와 시험 세트를 얻습니다.         
 
-#
+# 중산층의 상환여부를 train set으로
+![image](https://user-images.githubusercontent.com/50114210/68084775-9bd05680-fe7d-11e9-831d-869670af84e2.png)      
 여기 또다른 예시가 있는데요 약간의 변형이 가미된 실화입니다.                   
 중산층의 우편 번호를 토대로 한 대출 승인으로 구성된 개발 세트에          
 최적화하는 데 어떤 머신러닝 팀이 여러 달을 썼습니다.         
@@ -78,7 +82,8 @@ categories: [Structuring Machine Learning Projects]
 대출 승인 여부를 결정하는데 도움을 주는 것이죠.               
 개발 세트는 중산층 우편번호에서 온 대출 신청을 바탕으로 했습니다. 미국에서의 우편번호죠.           
 
-#
+# 저소득층의 상환여부를 dev set으로    
+![image](https://user-images.githubusercontent.com/50114210/68084781-b0145380-fe7d-11e9-812d-d2dc67ea7453.png)         
 하지만 이 주제에 관해 몇 달을 연구한 팀은          
 저소득층 우편 주소의 데이터를 토대로 시험을 하기로 결정합니다.           
 당연히 중산층과 저소득층에서 얻어지는 데이터의 분포는 매우 다릅니다.          
@@ -88,7 +93,8 @@ categories: [Structuring Machine Learning Projects]
 세 달 후에 매니저가 완전히 다른 위치의 다른 목표를 맞히는 건 어떠냐고 제안하자.       
 팀이 아주 당황스러운 상황에 처하게 된 것이죠.          
 
-#
+# 가이드라인
+![image](https://user-images.githubusercontent.com/50114210/68084800-f79adf80-fe7d-11e9-8b92-8df8243641c0.png)     
 개발 세트와 시험 세트를 설정할 때 추천드리는 것은 미래에 얻어질 것으로 예상되고         
 좋은 성과를 내는 것이 중요한 데이터에 대하여 개발 세트와 시험 세트를 고르라는 겁니다.           
 특히, 개발 세트와 시험 세트는 동일한 분포에서 얻어져야 합니다.                
