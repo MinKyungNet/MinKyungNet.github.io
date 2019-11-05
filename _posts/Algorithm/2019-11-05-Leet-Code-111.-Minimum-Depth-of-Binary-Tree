@@ -1,0 +1,57 @@
+---
+layout: post
+title: "Leet Code 111. Minimum Depth of Binary Tree"
+tags: [DFS]
+categories: [Algorithm]
+---
+
+# 내가 푼 코드
+
+1. dpeth가 1이면 arr을 초기화한다.(사실 필요 없는 코드인데 뭔가 막히는 케이스가 있었다.)
+2. root가 없다면 0을 반환한다.
+3. 리프 노드라면 현재의 depth를 arr에 추가한다.
+4. left가 있다면 left탐색
+5. right가 있다면 right탐색
+6. 1부터 5를 계속 반복하며 모든 노드를 탐색
+7. 탐색이 완료 되었을 때 리프 노드들의 가장 작은 값을 반환한다.
+
+이 코드는 속도가 굉장히 느린데 depth와 arr을 계속해서 넘겨주기 때문인 것같다.        
+나중에 파이썬이 더욱 익숙해진다면 다시 수정해보리라.
+
+```python
+class Solution:
+    def minDepth(self, root: TreeNode, depth=1, arr=[]) -> int:
+        if depth == 1:
+            arr = []
+        if not root:
+            return 0
+        if not root.left and not root.right:
+            arr.append(depth)
+        if root.left:
+            self.minDepth(root.left, depth+1, arr)
+        if root.right:
+            self.minDepth(root.right, depth+1, arr)
+        return min(arr)
+```
+![image](https://user-images.githubusercontent.com/50114210/68178072-dc3eea00-ffcd-11e9-94fe-c9a10cd2a65e.png)       
+
+# 가장 빠른 코드
+
+1. root가 없으면 0을 리턴한다.
+2. (왜 반대로 쓴건지는 모르겠지만) 반대로 쓰면 통과가 안 된다.
+3. 왼쪽 노드가 없다면 오른쪽 노드를 탐색하고
+4. 오른쪽 노드가 없다면 왼쪽 노드를 탐색한다.
+5. 그리고 1 + min(왼쪽 노드의 리프 노드들의 값, 오른쪽의 리프노드들의 값)을 반환한다.
+
+```python
+class Solution:
+    def minDepth(self, root: TreeNode) -> int:
+        if not root:
+            return 0
+        if not root.left:
+            return 1 + self.minDepth(root.right)
+        if not root.right:
+            return 1 + self.minDepth(root.left)
+        
+        return 1 + min(self.minDepth(root.left), self.minDepth(root.right))
+```
