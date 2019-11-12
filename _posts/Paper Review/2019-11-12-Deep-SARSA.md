@@ -11,7 +11,7 @@ categories: [Paper Review]
 https://teamsaida.github.io/SAIDA_RL/installation/          
 여기에서 설치할 수 있다. 사이다 팀의 코드와 환경설정까지 금방 끝낼 수 있을 것이다.      
 
-https://teamsaida.github.io/SAIDA_RL/AvoidReavers/
+https://teamsaida.github.io/SAIDA_RL/AvoidReavers/             
 이 글은 AvoidReavers를 DeepSARSA로 돌린 코드를 리뷰한 것이다.
 
 
