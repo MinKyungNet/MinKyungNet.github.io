@@ -2,7 +2,7 @@
 layout: post
 title: "DataFrame Transform"
 tags: [Bag of Words, Tokenizer, Stopwords, CountVectorizer, TF-IDF, Word2Vec, Pipeline]
-categories:[Big data analsis]
+categories: [Big data analsis]
 ---
 
 ```python
