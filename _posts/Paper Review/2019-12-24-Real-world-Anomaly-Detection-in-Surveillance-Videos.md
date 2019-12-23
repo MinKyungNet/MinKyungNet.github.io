@@ -5,6 +5,4 @@ tags: [Surveillance, Video, anomaly]
 categories: [Paper Review]
 ---
 
-<iframe src="https://drive.google.com/file/d/1FQyAabfTSwVRgF3QmwhE61sefNBZLSuF/view?usp=sharing" frameborder="0" width="640" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-
-<iframe src="https://drive.google.com/file/d/1FQyAabfTSwVRgF3QmwhE61sefNBZLSuF/view?usp=sharing" width="640" height="480"></iframe>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR_gaenQVHSntwf14wctDneObjtcZIU7dXd4jX7ARTFEPzHQMvNqnA3s1eKXewkJQ/pub?start=false&loop=false&delayms=60000" frameborder="0" width="640" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
