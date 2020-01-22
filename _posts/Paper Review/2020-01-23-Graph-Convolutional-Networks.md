@@ -69,4 +69,39 @@ Node feature를 업데이트 하기 위하여 자기 자신의 정보와 인접�
 
 이를 수식으로 다음과 같이 나타낼 수 있습니다.
 
-![image](https://user-images.githubusercontent.com/50114210/72913129-0491e580-3d80-11ea-8396-991da95b8ead.png)
+![image](https://user-images.githubusercontent.com/50114210/72913129-0491e580-3d80-11ea-8396-991da95b8ead.png)     
+
+where
+
+![image](https://user-images.githubusercontent.com/50114210/72913193-212e1d80-3d80-11ea-89c3-35bb3d469fbc.png)    
+
+다시 말해, l+1 레이어에서 node i의 feature를 업데이트 하는 방법은 nodes(node i와 인접한 노드들)의 weight를 곱해주고 bias를 더한 형태에 활성화 함수를 입힌 형태입니다.     
+
+이를 모든 노드에 대하여 다음과 같이 하나의 행렬식으로 표현할 수 있습니다.   
+
+![image](https://user-images.githubusercontent.com/50114210/72913277-4589fa00-3d80-11ea-806a-9bb7c24160ea.png)   
+
+여기서 주의할 점은 인접 행렬 A의 대각원소를 모두 1로 하여야 자기 자신의 정보를 이용한다는 것을 쉽게 보일 수 있습니다.
+
+하지만, 위의 식을 바로 이용하게 되면 A를 정규화(normalization)하지 않기 때문에 연산 과정에서 feature vector의 scale이 완전히 바뀐다는 문제가 생기게 됩니다. 따라서 우리는 인접행렬 A를 다음과 같이 정규화하여 사용합니다.
+
+![image](https://user-images.githubusercontent.com/50114210/72913407-723e1180-3d80-11ea-9681-e0144df3f860.png)   
+
+where D is the diagonal node degree matrix,     
+
+![image](https://user-images.githubusercontent.com/50114210/72913466-8550e180-3d80-11ea-8005-99c1cefb4bb0.png)      
+
+D 행렬은 자신을 포함하여 몇 개의 노드와 연결이 되어있는지를 나타내는 행렬이고, 인접 행렬 A의 각 row의 원소들을 더하여 쉽게 얻을 수 있습니다. 이렇게 얻은 D 행렬의 역함수를 구하고 루트를 씌어주어 인접 행렬 A의 앞 뒤에 곱해주면 우리는 정규화된 인접 행렬을 구할 수 있습니다.   
+
+실제 사용에서는 graph convolution layer를 세번 정도 거쳐 각 노드의 feature를 업데이트하고 해당하는 task에 따라 classification 혹은 regression을 진행하면 됩니다.   
+
+# Conclusion
+<U>Graph Neural Networks는 강력합니다.</U> 더군다나, 그래프 구조로 표현 되는 drug discovery 분야에서는 더욱 강력합니다. 그 중 GNN을 대표하는 Graph Convolutional Networks에 대해 알아봤습니다. 이를 시작으로 SOTA graph model을 공부하여 drug discovery에 적용한다면 빠른 시일내에 인공지능으로 만든 약을 시중에서 볼 수 있을 것이라 예상합니다.
+
+# References
+
+[1] [<U>Thomax Kipf's blog post</U>](https://tkipf.github.io/graph-convolutional-networks/)   
+
+[2] [<U>SEMI-SUPERVISED CLASSIFICATION WITH GRAPH CONVOLUTIONAL NETWORKS</U>](https://arxiv.org/pdf/1609.02907.pdf) Thomas N. Kipf and Max Welling, ICLR 2017
+
+[3] [<U>Slide by DonghyeonKim</U>](https://www.slideshare.net/DonghyeonKim7/graph-convolutional-network-gcn)
