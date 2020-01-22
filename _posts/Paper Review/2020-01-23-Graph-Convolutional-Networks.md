@@ -20,9 +20,9 @@ Graph Neural Networks(GNN)는 drug discovery 인공지능의 수준을 올리는
 
 GNN에서 말하는 그래프에 대해 간략하게 설명하겠습니다. 그래프는 우선 다음 두가지로 이루어져 있습니다.         
 
-  1. Node(Vertex) : Fig 2. 왼쪽 그림에서 원으로 표시된 a, b, c, d, e, f를 node라 합니다.          
+    1. Node(Vertex) : Fig 2. 왼쪽 그림에서 원으로 표시된 a, b, c, d, e, f를 node라 합니다.          
 
-  2. Edge : 두 vertices를 연결한 선을 의미합니다.          
+    2. Edge : 두 vertices를 연결한 선을 의미합니다.          
 
 약에서 nodes는 원소들을, edges는 결합 방법(single, double, triple, aromatic 등)을 의미합니다.         
 
@@ -30,12 +30,43 @@ GNN에서 말하는 그래프에 대해 간략하게 설명하겠습니다. 그�
 
 이 외에도 그래프는 다음과 같은 상황에서 응용될 수 있습니다.      
 
-  1. SNS에서 관계 네트워크
+    1. SNS에서 관계 네트워크
   
-  2. 학술 연구에서 인용 네트워크
+    2. 학술 연구에서 인용 네트워크
   
-  3. 3D Mesh
+    3. 3D Mesh
   
 # Graph Convolutional Networks
 ![image](https://user-images.githubusercontent.com/50114210/72911676-cbf10c80-3d7d-11ea-8135-883d3af809de.png)       
 <center>Fig 3. An example of Graph Convolutional Networks. <U>Image taken from Thomax Kipf's blog post</U></center>
+
+Convolutional Neural Networks(CNN)에서 픽셀 대상으로 하던 합성곱(convolution) 연산을 Graph Convolutional Networks(GCN)에서는 그래프에 적용하자는 것이 가장 기본적인 아이디어입니다.      
+
+## Input
+![image](https://user-images.githubusercontent.com/50114210/72912164-94369480-3d7e-11ea-8dd1-e2c93f51644a.png)    
+<center>Fig 4. Input matrices of Graph Convolutional Networks</center>
+
+GCN에서는 다음의 두 행렬을 입력으로 받습니다.
+
+    - A : 그래프의 인접 행렬
+    
+    - X : N × D feature matrix (N = nodes의 수, D = vertex feature의 차원)
+    
+예를 들어, 그래프 구조가 SNS에서 친구들의 관계를 나타내는 네트워크라면 node는 사람이 될 것이고, edge는 사람들 간의 friendship의 정도가 될 것입니다. 이 때, 특징 행렬 X는 각 node의 feature(나이, 신장, 몸무게, 결혼 유무, 흡연 유무 등)로 만들어진 행렬을 의미합니다.
+
+## Output
+GCN은 node-level output 혹은 graph-level output이 모두 가능합니다. 이는 우리가 해결해야할 task가 어떤 형태인지에 따라 달라지게 됩니다. 예를 들어, SNS관계 네트워크에서 사람 단위로 분류하고 싶은 경우에는 node-level output이, 약을 분류하고 싶은 경우에는 graph-level output이 적절할 것입니다.
+
+    - Node-level output Z : N x F feature matrix(N = nodes의 수, F = node feature의 차원)
+    
+    - Graph-level output은 <U>pooling 연산</U>을 이용
+
+## How to update node feature
+![image](https://user-images.githubusercontent.com/50114210/72912885-a36a1200-3d7f-11ea-987c-a405177f754c.png)
+<center>Fig 5. Information needed to update feature of node b(left), node a(right)</center>
+
+Node feature를 업데이트 하기 위하여 자기 자신의 정보와 인접한 노드들의 정보를 함께 이용합니다. 예를 들어, 노드 b를 업데이트 하기 위해서 노트 a, b, c, d의 정보를 이용하고(Fig 5.의 좌측 그림), 노드 a를 업데이트 하기 위해서는 노드 a, b의 정보만을 이용하면 됩니다.(Fig 5.의 우측 그림).      
+
+이를 수식으로 다음과 같이 나타낼 수 있습니다.
+
+![image](https://user-images.githubusercontent.com/50114210/72913129-0491e580-3d80-11ea-8396-991da95b8ead.png)
