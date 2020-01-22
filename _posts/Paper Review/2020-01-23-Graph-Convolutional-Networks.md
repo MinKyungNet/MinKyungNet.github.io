@@ -9,4 +9,4 @@ Graph Neural Networks(GNN)는 drug discovery 인공지능의 수준을 올리는
 
 ![image](https://user-images.githubusercontent.com/50114210/72908527-ef658880-3d78-11ea-9c0a-24c5fed482f0.png)
 
-<center>gggg</center>
+<center>Fig 1. CVPR 2019 Top 25 keywords</center>
