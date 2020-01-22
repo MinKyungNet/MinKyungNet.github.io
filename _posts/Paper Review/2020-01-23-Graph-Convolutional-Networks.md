@@ -76,7 +76,7 @@ Node feature를 업데이트 하기 위하여 자기 자신의 정보와 인접�
      
 이를 수식으로 다음과 같이 나타낼 수 있습니다.      
 <br>   
-![image](https://user-images.githubusercontent.com/50114210/72913129-0491e580-3d80-11ea-8396-991da95b8ead.png)      
+![image](https://user-images.githubusercontent.com/50114210/72913129-0491e580-3d80-11ea-8396-991da95b8ead.png)
 <br>    
 where
 <br>     
@@ -92,7 +92,7 @@ where
         
 하지만, 위의 식을 바로 이용하게 되면 A를 정규화(normalization)하지 않기 때문에 연산 과정에서 feature vector의 scale이 완전히 바뀐다는 문제가 생기게 됩니다. 따라서 우리는 인접행렬 A를 다음과 같이 정규화하여 사용합니다.      
 <br>    
-![image](https://user-images.githubusercontent.com/50114210/72913407-723e1180-3d80-11ea-9681-e0144df3f860.png)   
+![image](https://user-images.githubusercontent.com/50114210/72913407-723e1180-3d80-11ea-9681-e0144df3f860.png)
 <br>      
 where D is the diagonal node degree matrix,     
 <br>
