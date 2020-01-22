@@ -21,11 +21,11 @@ Graph Neural Networks(GNN)는 drug discovery 인공지능의 수준을 올리는
     
 GNN에서 말하는 그래프에 대해 간략하게 설명하겠습니다. 그래프는 우선 다음 두가지로 이루어져 있습니다.    
        
-<br>
+
 1. Node(Vertex) : Fig 2. 왼쪽 그림에서 원으로 표시된 a, b, c, d, e, f를 node라 합니다.          
-<br>
+
 2. Edge : 두 vertices를 연결한 선을 의미합니다.          
-<br>
+
       
 약에서 nodes는 원소들을, edges는 결합 방법(single, double, triple, aromatic 등)을 의미합니다.         
      
@@ -33,13 +33,13 @@ GNN에서 말하는 그래프에 대해 간략하게 설명하겠습니다. 그�
     
 이 외에도 그래프는 다음과 같은 상황에서 응용될 수 있습니다.      
        
-<br>
+
 1. SNS에서 관계 네트워크
-<br>
+
 2. 학술 연구에서 인용 네트워크
-<br>
+
 3. 3D Mesh
-<br>
+
     
 <br>
 # Graph Convolutional Networks
@@ -54,21 +54,21 @@ Convolutional Neural Networks(CNN)에서 픽셀 대상으로 하던 합성곱(co
 <center>Fig 4. Input matrices of Graph Convolutional Networks</center>
    
 GCN에서는 다음의 두 행렬을 입력으로 받습니다.
-<br>   
+   
 * A : 그래프의 인접 행렬
-<br>        
+      
 * X : N × D feature matrix (N = nodes의 수, D = vertex feature의 차원)
-<br>      
+    
 예를 들어, 그래프 구조가 SNS에서 친구들의 관계를 나타내는 네트워크라면 node는 사람이 될 것이고, edge는 사람들 간의 friendship의 정도가 될 것입니다. 이 때, 특징 행렬 X는 각 node의 feature(나이, 신장, 몸무게, 결혼 유무, 흡연 유무 등)로 만들어진 행렬을 의미합니다.
       
 <br> 
 ## Output
 GCN은 node-level output 혹은 graph-level output이 모두 가능합니다. 이는 우리가 해결해야할 task가 어떤 형태인지에 따라 달라지게 됩니다. 예를 들어, SNS관계 네트워크에서 사람 단위로 분류하고 싶은 경우에는 node-level output이, 약을 분류하고 싶은 경우에는 graph-level output이 적절할 것입니다.
-<br>     
+   
 * Node-level output Z : N x F feature matrix(N = nodes의 수, F = node feature의 차원)
-<br>       
+     
 * Graph-level output은 <U>pooling 연산</U>을 이용
-<br>    
+  
 <br>   
 ## How to update node feature
 ![image](https://user-images.githubusercontent.com/50114210/72912885-a36a1200-3d7f-11ea-987c-a405177f754c.png)
@@ -98,8 +98,7 @@ where
 <br>      
 where D is the diagonal node degree matrix,     
 <br>
-![image](https://user-images.githubusercontent.com/50114210/72913466-8550e180-3d80-11ea-8005-99c1cefb4bb0.png)      
-<br>     
+![image](https://user-images.githubusercontent.com/50114210/72913466-8550e180-3d80-11ea-8005-99c1cefb4bb0.png)         
 D 행렬은 자신을 포함하여 몇 개의 노드와 연결이 되어있는지를 나타내는 행렬이고, 인접 행렬 A의 각 row의 원소들을 더하여 쉽게 얻을 수 있습니다. 이렇게 얻은 D 행렬의 역함수를 구하고 루트를 씌어주어 인접 행렬 A의 앞 뒤에 곱해주면 우리는 정규화된 인접 행렬을 구할 수 있습니다.   
        
 실제 사용에서는 graph convolution layer를 세번 정도 거쳐 각 노드의 feature를 업데이트하고 해당하는 task에 따라 classification 혹은 regression을 진행하면 됩니다.   
@@ -109,8 +108,7 @@ D 행렬은 자신을 포함하여 몇 개의 노드와 연결이 되어있는�
 <U>Graph Neural Networks는 강력합니다.</U> 더군다나, 그래프 구조로 표현 되는 drug discovery 분야에서는 더욱 강력합니다. 그 중 GNN을 대표하는 Graph Convolutional Networks에 대해 알아봤습니다. 이를 시작으로 SOTA graph model을 공부하여 drug discovery에 적용한다면 빠른 시일내에 인공지능으로 만든 약을 시중에서 볼 수 있을 것이라 예상합니다.
      
 <br>
-# References
-<br>    
+# References    
 [1] [<U>Thomax Kipf's blog post</U>](https://tkipf.github.io/graph-convolutional-networks/)   
 <br>      
 [2] [<U>SEMI-SUPERVISED CLASSIFICATION WITH GRAPH CONVOLUTIONAL NETWORKS</U>](https://arxiv.org/pdf/1609.02907.pdf) Thomas N. Kipf and Max Welling, ICLR 2017
