@@ -19,17 +19,20 @@ Graph Neural Networks(GNN)는 drug discovery 인공지능의 수준을 올리는
     
 <center>Fig 2. Graph(left), Adjacency matrix(right)</center>
     
-GNN에서 말하는 그래프에 대해 간략하게 설명하겠습니다. 그래프는 우선 다음 두가지로 이루어져 있습니다.         
+GNN에서 말하는 그래프에 대해 간략하게 설명하겠습니다. 그래프는 우선 다음 두가지로 이루어져 있습니다.    
+       
 <br>
 1. Node(Vertex) : Fig 2. 왼쪽 그림에서 원으로 표시된 a, b, c, d, e, f를 node라 합니다.          
 <br>
 2. Edge : 두 vertices를 연결한 선을 의미합니다.          
 <br>
+      
 약에서 nodes는 원소들을, edges는 결합 방법(single, double, triple, aromatic 등)을 의미합니다.         
      
 또한, 그래프는 Fig 2. 우측 그림과 같은 인접 행렬(Adjacency matrix)를 이용한다면 비교적 컴퓨터가 이해하기 쉽게 그래프를 표현할 수 있습니다. 각 column과 row에 순서대로 node set을 정의하고, edge로 연결이 되어 있으면 1, 그렇지 않으면 0으로 채워주어 간단하게 인접 행렬을 구할 수 있습니다. 보통, 인접 행렬은 자기 자신으로 가는 edge가 없기 때문에 대각 원소(diagonal elements)를 0으로 채웁니다. **하지만 GCN에서는 자기 자신의 정보를 이용하기 위하여 1로 채워 줍니다.**        
     
 이 외에도 그래프는 다음과 같은 상황에서 응용될 수 있습니다.      
+       
 <br>
 1. SNS에서 관계 네트워크
 <br>
@@ -37,6 +40,7 @@ GNN에서 말하는 그래프에 대해 간략하게 설명하겠습니다. 그�
 <br>
 3. 3D Mesh
 <br>
+    
 <br>
 # Graph Convolutional Networks
 ![image](https://user-images.githubusercontent.com/50114210/72911676-cbf10c80-3d7d-11ea-8135-883d3af809de.png)       
