@@ -43,10 +43,8 @@ GNN에서 말하는 그래프에 대해 간략하게 설명하겠습니다. 그�
 # Graph Convolutional Networks
 ![image](https://user-images.githubusercontent.com/50114210/72911676-cbf10c80-3d7d-11ea-8135-883d3af809de.png) 
 
-[<U>Image taken from Thomax Kipf's blog post</U>](https://tkipf.github.io/graph-convolutional-networks/)   
-
 <center>     
-Fig 3. An example of Graph Convolutional Networks.     
+Fig 3. An example of Graph Convolutional Networks. <U>Image taken from Thomax Kipf's blog post</U>     
 </center>
 
       
