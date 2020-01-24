@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Graph Convolutional Networks"
-tags: [GCNN]
+tags: [GCN]
 categories: [Paper Review]
 ---
 ![image](https://user-images.githubusercontent.com/50114210/72908465-d8269b00-3d78-11ea-8c37-afad920b4083.png)
