@@ -84,7 +84,8 @@ Node feature를 업데이트 하기 위하여 자기 자신의 정보와 인접�
 ![image](https://user-images.githubusercontent.com/50114210/72913129-0491e580-3d80-11ea-8396-991da95b8ead.png)
 <br>    
 where
-<br>     
+<br>    
+
 ![image](https://user-images.githubusercontent.com/50114210/72913193-212e1d80-3d80-11ea-89c3-35bb3d469fbc.png)     
 <br>   
 다시 말해, l+1 레이어에서 node i의 feature를 업데이트 하는 방법은 nodes(node i와 인접한 노드들)의 weight를 곱해주고 bias를 더한 형태에 활성화 함수를 입힌 형태입니다.      
@@ -97,7 +98,9 @@ where
         
 하지만, 위의 식을 바로 이용하게 되면 A를 정규화(normalization)하지 않기 때문에 연산 과정에서 feature vector의 scale이 완전히 바뀐다는 문제가 생기게 됩니다. 따라서 우리는 인접행렬 A를 다음과 같이 정규화하여 사용합니다.      
 <br>    
-![image](https://user-images.githubusercontent.com/50114210/72913407-723e1180-3d80-11ea-9681-e0144df3f860.png)
+<p align="center">
+<img src="https://user-images.githubusercontent.com/50114210/72913407-723e1180-3d80-11ea-9681-e0144df3f860.png">
+</p>
 <br>      
 where D is the diagonal node degree matrix,     
 <br>
