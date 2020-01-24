@@ -42,7 +42,7 @@ GNN에서 말하는 그래프에 대해 간략하게 설명하겠습니다. 그�
 <br>
 # Graph Convolutional Networks
 ![image](https://user-images.githubusercontent.com/50114210/72911676-cbf10c80-3d7d-11ea-8135-883d3af809de.png)        
-<center>Fig 3. An example of Graph Convolutional Networks. <U>Image taken from Thomax Kipf's blog post</U></center>
+<center>Fig 3. An example of Graph Convolutional Networks. [<U>Image taken from Thomax Kipf's blog post</U>](https://tkipf.github.io/graph-convolutional-networks/)</center>
    
 Convolutional Neural Networks(CNN)에서 픽셀 대상으로 하던 합성곱(convolution) 연산을 Graph Convolutional Networks(GCN)에서는 그래프에 적용하자는 것이 가장 기본적인 아이디어입니다.      
    
@@ -65,7 +65,7 @@ GCN은 node-level output 혹은 graph-level output이 모두 가능합니다. �
    
 * Node-level output Z : N x F feature matrix(N = nodes의 수, F = node feature의 차원)      
      
-* Graph-level output은 <U>pooling 연산</U>을 이용     
+* Graph-level output은 [<U>pooling 연산</U>](http://papers.nips.cc/paper/5954-convolutional-networks-on-graphs-for-learning-molecular-fingerprints)을 이용     
   
 <br>   
 ## How to update node feature
@@ -103,7 +103,7 @@ D 행렬은 자신을 포함하여 몇 개의 노드와 연결이 되어있는�
      
 <br>
 # Conclusion
-<U>Graph Neural Networks는 강력합니다.</U> 더군다나, 그래프 구조로 표현 되는 drug discovery 분야에서는 더욱 강력합니다. 그 중 GNN을 대표하는 Graph Convolutional Networks에 대해 알아봤습니다. 이를 시작으로 SOTA graph model을 공부하여 drug discovery에 적용한다면 빠른 시일내에 인공지능으로 만든 약을 시중에서 볼 수 있을 것이라 예상합니다.
+[<U>Graph Neural Networks는 강력합니다.</U>](https://arxiv.org/pdf/1810.00826.pdf) 더군다나, 그래프 구조로 표현 되는 drug discovery 분야에서는 더욱 강력합니다. 그 중 GNN을 대표하는 Graph Convolutional Networks에 대해 알아봤습니다. 이를 시작으로 SOTA graph model을 공부하여 drug discovery에 적용한다면 빠른 시일내에 인공지능으로 만든 약을 시중에서 볼 수 있을 것이라 예상합니다.
      
 <br>
 # References    
